@@ -5,12 +5,15 @@ This is a repository for my *personal* dotfiles. Use at your own risk.
 ## Details
 
 - **OS**: Arch Linux
-- **Shell**: zsh
 - **WM**: awesome
+- **Shell**: zsh
 - **Terminal**: kitty
 - **Editor**: neovim
-- **Browser**: librewolf
 - **Compositor**: picom
+- **Browser**: librewolf
+- **GTK theme**: Flat Remix Darkest with custom color
+- **Icons**: Tela Ubuntu Dark
+- **Font**: Iosevka Nerd Font
 
 ## Dependencies
 
@@ -21,10 +24,8 @@ This awesome setup has some dependencies:
 - `acpi` (battery widget)
 - `arc-icon-theme` (battery widget)
 - `alsa` and `pulseaudio` (volume widget)
-- `i3lock-fancy` (screenlocking)
+- `i3lock-fancy` and `scrot` (screenlocking)
 
 Most of widgets can be configured to work with other tools.
 
 `librewolf`, `kitty`, `neovim`, `picom`, `nm-applet` and `blueman` are also being called in [`rc.lua`](awesome/rc.lua) but can easily be replaced by your own software suite.
-
-For the theming, Iosevka Nerd Font and MesloLGS Nerd Font are being used.
