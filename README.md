@@ -17,7 +17,7 @@ This is a repository for my *personal* dotfiles. Use at your own risk.
 This awesome setup has some dependencies:
 
 - `brightnessctl` (brightness widget)
-- `iw` (internet widget)
+- `networkmanager` and `iw` (internet widget)
 - `acpi` (battery widget)
 - `arc-icon-theme` (battery widget)
 - `alsa` and `pulseaudio` (volume widget)
@@ -25,4 +25,4 @@ This awesome setup has some dependencies:
 
 Most of widgets can be configured to work with other tools.
 
-`librewolf`, `kitty`, `neovim` and `picom` are also being used in [`rc.lua`](awesome/rc.lua) but can easily be replaced by your own software suite.
+`librewolf`, `kitty`, `neovim`, `picom`, `nm-applet` and `blueman` are also being used in [`rc.lua`](awesome/rc.lua) but can easily be replaced by your own software suite.
