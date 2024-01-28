@@ -25,4 +25,6 @@ This awesome setup has some dependencies:
 
 Most of widgets can be configured to work with other tools.
 
-`librewolf`, `kitty`, `neovim`, `picom`, `nm-applet` and `blueman` are also being used in [`rc.lua`](awesome/rc.lua) but can easily be replaced by your own software suite.
+`librewolf`, `kitty`, `neovim`, `picom`, `nm-applet` and `blueman` are also being called in [`rc.lua`](awesome/rc.lua) but can easily be replaced by your own software suite.
+
+For the theming, Iosevka Nerd Font and MesloLGS Nerd Font are being used.
