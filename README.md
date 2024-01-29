@@ -23,9 +23,9 @@ This awesome setup has some dependencies:
 - `networkmanager` and `iw` (internet widget)
 - `acpi` (battery widget)
 - `arc-icon-theme` (battery widget)
-- `alsa` and `pulseaudio` (volume widget)
-- `i3lock-fancy` and `scrot` (screenlocking)
+- `alsa-utils` and `pulseaudio` (volume widget)
+- `aur/i3lock-fancy-git` and `scrot` (screenlocking)
 
 Most of widgets can be configured to work with other tools.
 
-`librewolf`, `kitty`, `neovim`, `picom`, `nm-applet` and `blueman` are also being called in [`rc.lua`](awesome/rc.lua) but can easily be replaced by your own software suite.
+`librewolf`, `kitty`, `neovim`, `flameshot`, `picom`, `nm-applet` and `blueman` are also being called in [`rc.lua`](awesome/rc.lua) but can easily be replaced by your own software suite.

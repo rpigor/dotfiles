@@ -481,9 +481,14 @@ globalkeys = gears.table.join(
 		end
 	end, { description = "restore minimized", group = "client" }),
 
+	-- Screenshot
+	awful.key({}, "Print", function()
+		awful.util.spawn_with_shell("flameshot gui")
+	end, { description = "take screenshot", group = "hotkeys" }),
+
 	-- Lock screen
 	awful.key({ altkey, "Control" }, "l", function ()
-		awful.util.spawn_with_shell("i3lock-fancy -f MesloLGS-NF-Regular -- scrot -z -o")
+		awful.util.spawn_with_shell("i3lock-fancy -f Iosevka-NF -- scrot -z -o")
 	end, { description = "lock screen", group = "hotkeys" }),
 
 	-- Screen brightness
@@ -532,7 +537,6 @@ globalkeys = gears.table.join(
 			history_path = awful.util.get_cache_dir() .. "/history_eval",
 		})
 	end, { description = "lua execute prompt", group = "awesome" }),
-
 	-- Menubar
 	awful.key({ modkey }, "p", function()
 		menubar.show()
@@ -698,15 +702,28 @@ awful.rules.rules = {
 	-- Add titlebars to normal clients and dialogs
 	{ rule_any = { type = { "normal", "dialog" } }, properties = { titlebars_enabled = true } },
 
-	-- Set browsers to always map on the tag named "www" on screen 1.
+	-- Set browsers to always map on the tag named "www".
 	{
 		rule_any = {
 			class = {
-				"LibreWolf"
+				"LibreWolf",
 			},
 		},
-		properties = { screen = 1, tag = "www", maximized = true, titlebars_enabled = false },
+		properties = { tag = "www", maximized = true, titlebars_enabled = false },
 	},
+
+	-- Set VSCode to always map on the tag named "main".
+	{
+		rule_any = {
+			class = {
+				"code-oss",
+				"code",
+				"Code"
+			},
+		},
+		properties = { tag = "main", maximized = true, titlebars_enabled = false },
+	},
+
 
 	-- Set Discord to always map on the tag name "social" on screen 1.
 	{
