@@ -12,6 +12,7 @@ This is a repository for my *personal* dotfiles. Use at your own risk.
 - **Compositor**: picom
 - **Browser**: librewolf
 - **GTK theme**: Flat Remix Darkest with custom color
+- **QT theme**: Fluent Orange Dark on kvantum
 - **Icons**: Tela Ubuntu Dark
 - **Font**: Iosevka Nerd Font
 
@@ -28,4 +29,4 @@ This awesome setup has some dependencies:
 
 Most of widgets can be configured to work with other tools.
 
-`librewolf`, `kitty`, `neovim`, `flameshot`, `picom`, `nm-applet` and `blueman` are also being called in [`rc.lua`](awesome/rc.lua) but can easily be replaced by your own software suite.
+`aur/librewolf`, `kitty`, `neovim`, `feh`, etc. are also being called in [`awesome/rc.lua`](awesome/rc.lua) but can easily be replaced by your own software suite.

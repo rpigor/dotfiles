@@ -12,6 +12,7 @@ alias cat='bat'
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
+alias updatemirrors='sudo reflector --country Germany --latest 15 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 
 # stupid flatpak aliases
 alias vscode='com.visualstudio.code'

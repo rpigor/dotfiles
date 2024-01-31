@@ -76,7 +76,7 @@ local function launch(args)
     local hide_on_leave = args.hide_on_leave or false
 
     local onlogout = args.onlogout or function () awesome.quit() end
-    local onlock = args.onlock or function() awful.spawn.with_shell("i3lock") end
+    local onlock = args.onlock or function() awful.spawn.with_shell("i3lock-fancy -f Iosevka-NF -- scrot -z -o") end
     local onreboot = args.onreboot or function() awful.spawn.with_shell("reboot") end
     local onsuspend = args.onsuspend or function() awful.spawn.with_shell("systemctl suspend") end
     local onpoweroff = args.onpoweroff or function() awful.spawn.with_shell("shutdown now") end
@@ -92,7 +92,7 @@ local function launch(args)
             phrase_widget,
             {
                 {
-                    create_button('log-out', 'Log Out (l)',
+                    create_button('log-out', 'Log out (l)',
                         accent_color, label_color, onlogout, icon_size, icon_margin),
                     create_button('lock', 'Lock (k)',
                         accent_color, label_color, onlock, icon_size, icon_margin),
@@ -100,7 +100,7 @@ local function launch(args)
                         accent_color, label_color, onreboot, icon_size, icon_margin),
                     create_button('moon', 'Suspend (u)',
                         accent_color, label_color, onsuspend, icon_size, icon_margin),
-                    create_button('power', 'Power Off (s)',
+                    create_button('power', 'Power off (s)',
                         accent_color, label_color, onpoweroff, icon_size, icon_margin),
                     id = 'buttons',
                     spacing = 8,

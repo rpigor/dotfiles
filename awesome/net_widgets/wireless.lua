@@ -21,7 +21,7 @@ local function draw_signal(level)
 	local img = cairo.ImageSurface.create(cairo.Format.ARGB32, 32, 32)
 	local cr = cairo.Context(img)
 
-	cr:set_source(gears.color(theme.fg_normal))
+	cr:set_source(gears.color(theme.icon))
 	if level > 75 then
 		cr:arc(32 / 2, 32 / 2, 32 / 2, 145 * math.pi / 180, 395 * math.pi / 180)
 		cr:arc_negative(32 / 2, 32 / 2, 32 / 2 - 3, 395 * math.pi / 180, 145 * math.pi / 180)
@@ -231,6 +231,7 @@ local function worker(args)
 		notification = naughty.notify({
 			preset = fs_notification_preset,
 			text = text_grabber(),
+			title = "Wireless status",
 			timeout = t_out,
 			screen = mouse.screen,
 			position = popup_position,

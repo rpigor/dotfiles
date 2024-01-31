@@ -386,6 +386,7 @@ local function worker(args)
 
     notification = naughty.notify({
         preset = fs_notification_preset,
+        title = "Ethernet status",
         text = text_grabber(),
         timeout = t_out,
         screen = mouse.screen,

@@ -152,22 +152,19 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
-
--- TODO fix this ugly thing
 local markup = lain.util.markup
-local white = "#FFFFFF"
 
 -- CPU widget
 local cpu = lain.widget.sysload({
 	settings = function()
-		widget:set_markup(markup.font(beautiful.font, markup(white, "CPU ") .. load_1))
+		widget:set_markup(markup.font(beautiful.font, markup(beautiful.icon, "CPU ") .. load_1 .. "%"))
 	end,
 })
 
 -- Memory widget
 local mem = lain.widget.mem({
 	settings = function()
-		widget:set_markup(markup.font(beautiful.font, markup(white, "MEM ") .. mem_now.used))
+		widget:set_markup(markup.font(beautiful.font, markup(beautiful.icon, "MEM ") .. mem_now.used .. "MB"))
 	end,
 })
 
@@ -184,6 +181,8 @@ local brightness_widget_inst = brightness_widget({ type = "icon_and_text", progr
 local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
 local battery_widget_inst = battery_widget({
 	font = beautiful.font,
+	display_notification = true,
+	display_notification_onClick = false,
 	show_current_level = true,
 	path_to_icons = "/usr/share/icons/Arc/status/symbolic/",
 })
@@ -205,8 +204,10 @@ mytextclock:connect_signal("button::press", function(_, _, _, button)
 end)
 
 -- Logout menu widget
-local logout_menu_widgets = require("awesome-wm-widgets.logout-menu-widget.logout-menu")
-local logout_menu_widget = logout_menu_widgets()
+local logout_popup = require("awesome-wm-widgets.logout-popup-widget.logout-popup")
+local logout_popup_inst = logout_popup.widget{ phrases = { "Hasta la vista, baby!", "Adiós!", "Tschüssi!", "Tchau!", "Até logo!", "Bye-bye!" } }
+-- local logout_menu_widgets = require("awesome-wm-widgets.logout-menu-widget.logout-menu")
+-- local logout_menu_widget = logout_menu_widgets()
 
 -- Separator
 local spr = wibox.widget.textbox("  ")
@@ -374,15 +375,15 @@ awful.screen.connect_for_each_screen(function(s)
 			net_wired,
 			net_wireless,
 			spr,
-			brightness_widget_inst,
-			spr,
 			battery_widget_inst,
+			spr,
+			brightness_widget_inst,
 			spr,
 			volume_widget_inst,
 			spr,
 			mytextclock,
 			spr,
-			logout_menu_widget,
+			logout_popup_inst,
 			-- s.mylayoutbox,
 		},
 	})
@@ -824,6 +825,8 @@ tag.connect_signal("property::selected", backham)
 
 -- }}}
 
-awful.util.spawn("picom -b")
-awful.util.spawn_with_shell("pgrep -u $USER -x nm-applet > /dev/null || (nm-applet &)")
-awful.util.spawn_with_shell("pgrep -u $USER -x blueman-applet > /dev/null || (blueman-applet &)")
+-- Set wallpaper in both monitors
+awful.util.spawn_with_shell("feh --no-fehbg --bg-fill " .. gears.filesystem.get_configuration_dir() .. "theme/background01.png " .. gears.filesystem.get_configuration_dir() .. "theme/background02.png")
+
+-- Autorun
+awful.util.spawn_with_shell(gears.filesystem.get_configuration_dir() .. "autorun.sh")

@@ -12,7 +12,7 @@ local themes_path = gfs.get_themes_dir()
 local theme = {}
 theme.dir = os.getenv("HOME") .. "/.config/awesome/theme/"
 
-theme.font = "Iosevka Nerd Font 9.5"
+theme.font = "Iosevka Nerd Font 10"
 
 theme.bg_normal = "#140c0b"
 theme.bg_focus = theme.bg_normal
@@ -28,6 +28,7 @@ theme.border_width = dpi(0)
 theme.border_normal = "#302627"
 theme.border_focus = "#c2745b"
 theme.border_marked = theme.fg_urgent
+theme.icon = "#d3d3d3"
 
 -- There are other variable sets
 -- overriding the default one when
@@ -102,7 +103,7 @@ theme.titlebar_maximized_button_focus_inactive = themes_path .. "default/titleba
 theme.titlebar_maximized_button_normal_active = themes_path .. "default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active = themes_path .. "default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = theme.dir .. "background.png"
+theme.wallpaper = theme.dir .. "background01.png"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path .. "default/layouts/fairhw.png"

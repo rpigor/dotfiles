@@ -82,15 +82,16 @@ local function worker(user_args)
         function(stdout, _, _, _)
             naughty.destroy(notification)
             notification = naughty.notify{
-                text =  stdout,
+                text = string.sub(stdout, 1, string.len(stdout)-1),
                 title = "Battery status",
-                icon = path_to_icons .. batteryType .. ".svg",
-                icon_size = dpi(16),
+                -- icon = path_to_icons .. batteryType .. ".svg",
+                -- icon_size = dpi(16),
                 position = position,
-                timeout = 5, hover_timeout = 0.5,
-                width = 200,
+                timeout = 0,
+		hover_timeout = 0.5,
+        	width = 200,
                 screen = mouse.screen
-            }
+	    }
         end
         )
     end
@@ -199,7 +200,7 @@ local function worker(user_args)
         battery_widget:connect_signal("mouse::leave", function() naughty.destroy(notification) end)
     elseif display_notification_onClick then
         battery_widget:connect_signal("button::press", function(_,_,_,button)
-            if (button == 3) then show_battery_status(batteryType) end
+            if (button == 1) then show_battery_status(batteryType) end
         end)
         battery_widget:connect_signal("mouse::leave", function() naughty.destroy(notification) end)
     end
