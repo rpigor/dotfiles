@@ -27,6 +27,6 @@ This awesome setup has some dependencies:
 - `alsa-utils` and `pulseaudio` (volume widget)
 - `aur/i3lock-fancy-git` and `scrot` (screenlocking)
 
-Most of widgets can be configured to work with other tools.
+Most of the widgets can be configured to work with other tools.
 
 `aur/librewolf`, `kitty`, `neovim`, `feh`, etc. are also being called in [`awesome/rc.lua`](awesome/rc.lua) but can easily be replaced by your own software suite.
