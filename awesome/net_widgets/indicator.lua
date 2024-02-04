@@ -384,14 +384,17 @@ local function worker(args)
   function widget:show(t_out)
     widget:hide()
 
-    notification = naughty.notify({
-        preset = fs_notification_preset,
-        title = "Ethernet status",
-        text = text_grabber(),
-        timeout = t_out,
-        screen = mouse.screen,
-        position = popup_position
-      })
+    local notif_txt = text_grabber()
+    if notif_text ~= nil and #notif_text ~= 0 then
+        notification = naughty.notify({
+            preset = fs_notification_preset,
+            title = "Ethernet status",
+            text = text_grabber(),
+            timeout = t_out,
+            screen = mouse.screen,
+            position = popup_position
+        })
+    end
   end
 
   -- Bind onclick event function

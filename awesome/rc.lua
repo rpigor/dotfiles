@@ -157,7 +157,7 @@ local markup = lain.util.markup
 -- CPU widget
 local cpu = lain.widget.sysload({
 	settings = function()
-		widget:set_markup(markup.font(beautiful.font, markup(beautiful.icon, "CPU ") .. load_1 .. "%"))
+		widget:set_markup(markup.font(beautiful.font, markup(beautiful.icon, "CPU ") .. load_1))
 	end,
 })
 
@@ -708,12 +708,15 @@ awful.rules.rules = {
 		rule_any = {
 			class = {
 				"LibreWolf",
+				"librewolf",
+				"firefox",
+				"Firefox",
 			},
 		},
 		properties = { tag = "www", maximized = true, titlebars_enabled = false },
 	},
 
-	-- Set VSCode to always map on the tag named "main".
+	-- Set VSCode to always start maximized and without titlebar.
 	{
 		rule_any = {
 			class = {
@@ -722,7 +725,7 @@ awful.rules.rules = {
 				"Code"
 			},
 		},
-		properties = { tag = "main", maximized = true, titlebars_enabled = false },
+		properties = { maximized = true, titlebars_enabled = false },
 	},
 
 
