@@ -155,16 +155,16 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 local markup = lain.util.markup
 
 -- CPU widget
-local cpu = lain.widget.sysload({
+local cpu = lain.widget.cpu({
 	settings = function()
-		widget:set_markup(markup.font(beautiful.font, markup(beautiful.icon, "CPU ") .. load_1))
+		widget:set_markup(markup.font(beautiful.font, markup(beautiful.icon, "CPU ") .. cpu_now.usage .. "%"))
 	end,
 })
 
 -- Memory widget
 local mem = lain.widget.mem({
 	settings = function()
-		widget:set_markup(markup.font(beautiful.font, markup(beautiful.icon, "MEM ") .. mem_now.used .. "MB"))
+		widget:set_markup(markup.font(beautiful.font, markup(beautiful.icon, "MEM ") .. mem_now.perc .. "%"))
 	end,
 })
 
@@ -175,7 +175,7 @@ local net_wired = net_widgets.indicator({ ignore_interfaces = { "lo", "wlp2s0" }
 
 -- Brightness widget
 local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightness")
-local brightness_widget_inst = brightness_widget({ type = "icon_and_text", program = "brightnessctl" })
+local brightness_widget_inst = brightness_widget({ type = "icon_and_text", program = "brightnessctl", percentage = true })
 
 -- Battery widget
 local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
