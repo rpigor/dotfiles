@@ -175,7 +175,8 @@ local net_wired = net_widgets.indicator({ ignore_interfaces = { "lo", "wlp2s0" }
 
 -- Brightness widget
 local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightness")
-local brightness_widget_inst = brightness_widget({ type = "icon_and_text", program = "brightnessctl", percentage = true })
+local brightness_widget_inst =
+	brightness_widget({ type = "icon_and_text", program = "brightnessctl", percentage = true })
 
 -- Battery widget
 local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
@@ -184,6 +185,7 @@ local battery_widget_inst = battery_widget({
 	display_notification = true,
 	display_notification_onClick = false,
 	show_current_level = true,
+	warning_msg_position = "top_right",
 	path_to_icons = "/usr/share/icons/Arc/status/symbolic/",
 })
 
@@ -205,7 +207,9 @@ end)
 
 -- Logout menu widget
 local logout_popup = require("awesome-wm-widgets.logout-popup-widget.logout-popup")
-local logout_popup_inst = logout_popup.widget{ phrases = { "Hasta la vista, baby!", "Adiós!", "Tschüssi!", "Tchau!", "Até logo!", "Bye-bye!" } }
+local logout_popup_inst = logout_popup.widget({
+	phrases = { "Hasta la vista, baby!", "Adiós!", "Tschüssi!", "Tchau!", "Até logo!", "Bye-bye!" },
+})
 -- local logout_menu_widgets = require("awesome-wm-widgets.logout-menu-widget.logout-menu")
 -- local logout_menu_widget = logout_menu_widgets()
 
@@ -488,7 +492,7 @@ globalkeys = gears.table.join(
 	end, { description = "take screenshot", group = "hotkeys" }),
 
 	-- Lock screen
-	awful.key({ altkey, "Control" }, "l", function ()
+	awful.key({ altkey, "Control" }, "l", function()
 		awful.util.spawn_with_shell("i3lock-fancy -f Iosevka-NF -- scrot -z -o")
 	end, { description = "lock screen", group = "hotkeys" }),
 
@@ -722,12 +726,11 @@ awful.rules.rules = {
 			class = {
 				"code-oss",
 				"code",
-				"Code"
+				"Code",
 			},
 		},
 		properties = { maximized = true, titlebars_enabled = false },
 	},
-
 
 	-- Set Discord to always map on the tag name "social" on screen 1.
 	{
@@ -829,7 +832,13 @@ tag.connect_signal("property::selected", backham)
 -- }}}
 
 -- Set wallpaper in both monitors
-awful.util.spawn_with_shell("feh --no-fehbg --bg-fill " .. gears.filesystem.get_configuration_dir() .. "theme/background01.png " .. gears.filesystem.get_configuration_dir() .. "theme/background02.png")
+awful.util.spawn_with_shell(
+	"feh --no-fehbg --bg-fill "
+		.. gears.filesystem.get_configuration_dir()
+		.. "theme/background01.png "
+		.. gears.filesystem.get_configuration_dir()
+		.. "theme/background02.png"
+)
 
 -- Autorun
 awful.util.spawn_with_shell(gears.filesystem.get_configuration_dir() .. "autorun.sh")
