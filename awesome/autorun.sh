@@ -1,10 +1,9 @@
 #!/bin/sh
 
 run() {
-  if ! pgrep -f "$1" ;
-  then
-    "$@"&
-  fi
+	if ! pgrep -f "$1"; then
+		"$@" &
+	fi
 }
 
 run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -14,7 +13,7 @@ run xss-lock -- i3lock-fancy -f Iosevka-NF -- scrot -z -o
 
 run picom
 
-run nm-applet
+# run nm-applet
 run blueman-applet
 run flameshot
 
