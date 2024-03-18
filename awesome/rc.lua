@@ -170,8 +170,8 @@ local mem = lain.widget.mem({
 
 -- Net widget
 local net_widgets = require("net_widgets")
-local net_wireless = net_widgets.wireless({ interface = "wlp2s0", onclick = "nm-connection-editor", indent = 3 })
-local net_wired = net_widgets.indicator({ ignore_interfaces = { "lo", "wlp2s0" }, timeout = 5 })
+local net_wireless = net_widgets.wireless({ interface = "wlp3s0", onclick = "nm-connection-editor", indent = 3 })
+local net_wired = net_widgets.indicator({ ignore_interfaces = { "lo", "wlp2s0", "wlp3s0" }, timeout = 5 })
 
 -- Brightness widget
 local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightness")
@@ -705,7 +705,10 @@ awful.rules.rules = {
 	},
 
 	-- Add titlebars to normal clients and dialogs
-	{ rule_any = { type = { "normal", "dialog" } }, properties = { titlebars_enabled = true } },
+	{
+		rule_any = { type = { "normal", "dialog" } },
+		properties = { titlebars_enabled = true }, -- , width = 640, height = 480, placement = awful.placement.centered },
+	},
 
 	-- Set browsers to always map on the tag named "www".
 	{
