@@ -1,32 +1,44 @@
 # dotfiles
 
-This is a repository for my *personal* dotfiles. Use at your own risk.
+This is a repository for my **personal** dotfiles. Use at your own risk.
 
 ## Details
 
 - **OS**: Arch Linux
-- **WM**: awesome
+- **WM** on Wayland: hyprland
+- **WM** on X11: awesome
 - **Shell**: zsh
 - **Terminal**: kitty
-- **Editor**: neovim
-- **Compositor**: picom
-- **Browser**: librewolf
 - **GTK theme**: Flat Remix Darkest with custom color
 - **QT theme**: Fluent Orange Dark on kvantum
 - **Icons**: Tela Ubuntu Dark
+- **Cursor**: Phinger Cursor Dark
 - **Font**: Iosevka Nerd Font
 
 ## Dependencies
 
-This awesome setup has some dependencies:
+Both setups have many soft dependencies. The following lists are not exhaustive, so you'll have to figure them out by yourself.
 
-- `brightnessctl` (brightness widget)
-- `networkmanager` and `iw` (internet widget)
-- `acpi` (battery widget)
-- `arc-icon-theme` (battery widget)
-- `alsa-utils` and `pulseaudio` (volume widget)
-- `aur/i3lock-fancy-git` and `scrot` (screenlocking)
+### hyprland
 
-Most of the widgets can be configured to work with other tools.
+- `waybar`
+- `hyprpaper`, `hypridle` and `hyprlock`
+- `wofi`
+- `mako`
+- `cliphist`
+- `aur/wlogout`
+- `pipewire`, `libpulse`
+- `brightnessctl`
+- `slurp`, `grim`, `aur/hyprpicker` and `swappy`
+- etc.
 
-`aur/librewolf`, `kitty`, `neovim`, `feh`, etc. are also being called in [`awesome/rc.lua`](awesome/rc.lua) but can easily be replaced by your own software suite.
+### awesome
+
+- `alsa-utils`, `pulseaudio`
+- `networkmanager`, `iw`
+- `brightnessctl`
+- `acpi`
+- `arc-icon-theme`
+- `aur/i3lock-fancy-git`, `scrot`
+- `feh`
+- etc.
