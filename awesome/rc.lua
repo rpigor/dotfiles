@@ -170,7 +170,7 @@ local mem = lain.widget.mem({
 
 -- Net widget
 local net_widgets = require("net_widgets")
-local net_wireless = net_widgets.wireless({ interface = "wlp3s0", onclick = "nm-connection-editor", indent = 3 })
+local net_wireless = net_widgets.wireless({ interface = "wlp3s0", onclick = "nm-connection-editor", indent = 4 })
 local net_wired = net_widgets.indicator({ ignore_interfaces = { "lo", "wlp2s0", "wlp3s0" }, timeout = 5 })
 
 -- Brightness widget
