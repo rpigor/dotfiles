@@ -1,0 +1,53 @@
+## Mako configuration file
+
+# GLOBAL CONFIGURATION OPTIONS
+max-history=100
+sort=-time
+
+# BINDING OPTIONS
+on-button-left=dismiss
+on-button-middle=none
+on-button-right=dismiss-all
+on-touch=dismiss
+on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
+
+# STYLE OPTIONS
+font=Iosevka Nerd Font 12
+width=380
+height=200
+margin=10
+padding=15
+border-size=3
+border-radius=12
+icons=1
+max-icon-size=96
+icon-location=left
+markup=1
+actions=1
+history=1
+text-alignment=left
+default-timeout=5000
+ignore-timeout=0
+max-visible=5
+layer=overlay
+anchor=top-right
+
+background-color=#2a1f1ef3
+text-color=#e2ccb0
+border-color=#140c0b
+progress-color=over #89b4fa
+
+[urgency=low]
+border-color=#140c0b
+default-timeout=2000
+
+[urgency=normal]
+border-color=#140c0b
+default-timeout=5000
+
+[urgency=high]
+background-color=#422624f3
+border-color=#2e0300
+text-color=#f5bfbf
+default-timeout=0
+
