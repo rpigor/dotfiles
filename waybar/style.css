@@ -43,6 +43,7 @@ window#waybar {
 }
 
 #clock,
+#backlight,
 #battery,
 #cpu,
 #memory,
@@ -78,7 +79,7 @@ window#waybar {
     color: #2dcc36;
 }
 #battery.warning:not(.charging) {
-	color: #e6e600;
+    color: #e6e600;
 }
 #battery.critical:not(.charging) {
     color: #cc3436;
