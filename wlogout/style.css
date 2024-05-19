@@ -1,52 +1,83 @@
-/** ********** Fonts ********** **/
-* {
-    font-family: "Iosevka Nerd Font", archcraft, sans-serif;
-    font-size: 14px;
+window {
+    background-color: rgba(0,0,0,0);
+    font-family: "Iosevka Nerd Font", sans-serif;
+    font-size: 18px;
     font-weight: bold;
 }
 
-/** ********** Main Window ********** **/
-window {
-	background-color: #1E1E2E;
-}
-
-/** ********** Buttons ********** **/
 button {
-    background-color: #242434;
-    color: #FFFFFF;
-    border: 5px solid #282838;
-    border-radius: 20px;
+    background-color: #140c0b;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 35%;
-    margin: 10px 10px;
-}
-
-button:focus, button:active, button:hover {
-    background-color: #89B4FA;
+    color: #e2ccb0;
+    border-radius: 25px;
     outline-style: none;
+    margin: 25px 25px;
+    box-shadow: 0 0 10px 2px transparent;
+    transition: all 0.2s ease-in;
 }
-
-#lock {
-    background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+button:hover {
+    background-color: rgba(216,129,102,0.9);
+    color: #140c0b;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, .4);
+    transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.5s ease-in;
 }
-
-#logout {
-    background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
-}
-
-#suspend {
-    background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
-}
-
-#hibernate {
-    background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
+button:focus {
+    border: 3px solid rgba(216,129,102,0.9);;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, .4);
 }
 
 #shutdown {
-    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+    background-size: 35%;
+    background-image: image(url("/home/igorr/.config/wlogout/icons/power-light.png"));
+}
+#shutdown:hover {
+    background-size: 45%;
+    background-image: image(url("/home/igorr/.config/wlogout/icons/power-dark.png"));
+}
+
+#logout {
+    background-size: 35%;
+    background-image: image(url("/home/igorr/.config/wlogout/icons/logout-light.png"));
+
+}
+#logout:hover {
+    background-size: 45%;
+    background-image: image(url("/home/igorr/.config/wlogout/icons/logout-dark.png"));
 }
 
 #reboot {
-    background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+    background-size: 35%;
+    background-image: image(url("/home/igorr/.config/wlogout/icons/restart-light.png"));
+}
+#reboot:hover {
+    background-size: 45%;
+    background-image: image(url("/home/igorr/.config/wlogout/icons/restart-dark.png"));
+}
+
+#lock {
+    background-size: 35%;
+    background-image: image(url("/home/igorr/.config/wlogout/icons/lock-light.png"));
+}
+#lock:hover {
+    background-size: 45%;
+    background-image: image(url("/home/igorr/.config/wlogout/icons/lock-dark.png"));
+}
+
+#hibernate {
+    background-size: 35%;
+    background-image: image(url("/home/igorr/.config/wlogout/icons/hibernate-light.png"));
+}
+#hibernate:hover {
+    background-size: 45%;
+    background-image: image(url("/home/igorr/.config/wlogout/icons/hibernate-dark.png"));
+}
+
+#suspend {
+    background-size: 35%;
+    background-image: image(url("/home/igorr/.config/wlogout/icons/hibernate-light.png"));
+}
+#suspend:hover {
+    background-size: 45%;
+    background-image: image(url("/home/igorr/.config/wlogout/icons/hibernate-dark.png"));
 }
