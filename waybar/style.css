@@ -2,17 +2,15 @@
     border: none;
     font-family: Font Awesome, Iosevka Nerd Font, Arial, sans-serif;
     font-size: 14px;
-    color: #e2ccb0;
     border-radius: 20px;
 }
 
-window {
-    font-weight: bold;
-}
 window#waybar {
-    background: rgba(0, 0, 0, 0);
+    font-weight: bold;
+    background: rgba(0,0,0,0);
+    color: #e2ccb0;
 }
-/*-----module groups----*/
+
 .modules-right {
     background-color: rgba(20,12,11,0.9);
     margin: 2px 10px 4px 0;
@@ -22,24 +20,28 @@ window#waybar {
     margin: 2px 0 4px 0;
 }
 .modules-left {
+    background-color: rgba(0,0,0,0);
     margin: 2px 0 4px 5px;
-    /*background-color: rgba(0,119,179,0.6);*/
 }
-/*-----modules indv----*/
+
 #workspaces {
     background-color: rgba(20,12,11,0.9);
     margin: 0 10px 0 0;
 }
 #workspaces button {
+    margin: 0 2px;
     padding: 1px 5px;
-    background-color: transparent;
+    background: transparent;
 }
 #workspaces button:hover {
-    box-shadow: inherit;
-	background-color: rgba(216,129,102,1);
+    background: rgba(201,103,73,0.9);
+    color: rgba(20,12,11,0.9);
+    transition: all 0.2s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.5s ease-in;
 }
-#workspaces button.focused {
-	background-color: rgba(20,12,11,0.8);
+#workspaces button.active {
+    background: rgba(201,103,73,0.9);
+    color: rgba(20,12,11,0.9);
+    transition: all 0.2s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.5s ease-in;
 }
 
 #clock,
@@ -53,8 +55,6 @@ window#waybar {
 #custom-media,
 #tray,
 #mode,
-#custom-power,
-#custom-menu,
 #idle_inhibitor {
     padding: 0 10px;
 }
@@ -62,13 +62,7 @@ window#waybar {
     color: #cc3436;
     font-weight: bold;
 }
-#custom-power {
-    background-color: rgba(0,119,179,0.6);
-    border-radius: 100px;
-    margin: 5px 5px;
-    padding: 1px 1px 1px 6px;
-}
-/*-----Indicators----*/
+
 #idle_inhibitor.activated {
     color: #2dcc36;
 }
@@ -83,6 +77,11 @@ window#waybar {
 }
 #battery.critical:not(.charging) {
     color: #cc3436;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 #temperature.critical {
     color: #cc3436;
