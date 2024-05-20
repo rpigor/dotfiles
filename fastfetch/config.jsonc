@@ -1,0 +1,92 @@
+{
+    "display": {
+        "size": {
+            "maxPrefix": "MB",
+            "ndigits": 0
+        }
+    },
+    "modules": [
+        "title",
+        "separator",
+        {
+            "type": "os",
+            "key": "    OS",
+            "keyColor": "red"
+        },
+        {
+            "type": "kernel",
+            "key": "    Kernel",
+            "keyColor": "red"
+        },
+        {
+            "type": "packages",
+            "key": "    Packages",
+            "keyColor": "red"
+        },
+        {
+            "type": "display",
+            "key": "    Display",
+            "keyColor": "red"
+        },
+        {
+            "type": "wm",
+            "key": "    WM",
+            "keyColor": "red"
+        },
+        {
+            "type": "terminal",
+            "key": "    Terminal",
+            "keyColor": "red"
+        },
+        {
+            "type": "uptime",
+            "key": "  󰥔  UpTime",
+            "keyColor": "red"
+        },
+        "separator",
+        {
+            "type": "cpu",
+            "format": "{1}",
+            "key": "    CPU",
+            "keyColor": "green"
+        },
+        {
+            "type": "gpu",
+            "key": "    GPU",
+            "keyColor": "green",
+            "format": "{1} {2}"
+        },
+        {
+            "type": "memory",
+            "key": "    Memory",
+            "keyColor": "green"
+        },
+        "separator",
+        {
+            "type": "theme",
+            "key": "    Theme",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "icons",
+            "key": "    Icons",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "font",
+            "key": "  🗚  Font",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "cursor",
+            "key": "   󰇀 Cursor",
+            "keyColor": "yellow"
+        },
+        "break",
+        {
+            "type": "colors",
+            "paddingLeft": 5,
+            "symbol": "circle"
+        }
+    ]
+}
