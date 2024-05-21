@@ -1,22 +1,23 @@
 # Gurobi Optimizer related stuff
-export GUROBI_HOME="/opt/gurobi/linux64"
-export PATH="${PATH}:${GUROBI_HOME}/bin"
-export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
-export GRB_LICENSE_FILE="${HOME}/.config/gurobi.lic"
+# export GUROBI_HOME="/opt/gurobi/linux64"
+# export PATH="${PATH}:${GUROBI_HOME}/bin"
+# export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
+# export GRB_LICENSE_FILE="${HOME}/.config/gurobi.lic"
 
 # general aliases
 alias ls='exa -al --color-scale --group-directories-first --icons'
-alias duf='duf -theme ansi'
+alias df='duf -theme ansi'
 alias grep='grep --color=auto'
 alias cat='bat'
-alias cp='cp -i'
-alias mv='mv -i'
-alias rm='rm -i'
-alias updatemirrors='sudo reflector --country Germany --age 8 --threads 3 --sort rate --save /etc/pacman.d/mirrorlist'
+alias neofetch='fastfetch'
+# alias cp='cp -i'
+# alias mv='mv -i'
+# alias rm='rm -i'
+alias updatemirrors='sudo reflector --country Brazil --age 8 --threads 3 --sort rate --save /etc/pacman.d/mirrorlist'
 
 # stupid flatpak aliases
-alias vscode='com.visualstudio.code'
-alias discord='com.discordapp.Discord'
+# alias vscode='com.visualstudio.code'
+# alias discord='com.discordapp.Discord'
 
 # kitty ssh alias
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"

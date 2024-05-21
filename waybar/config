@@ -1,7 +1,7 @@
 {
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"], 
-    "modules-right": ["network", "cpu", "memory", "pulseaudio", "backlight", "battery", "tray"],
+    "modules-right": ["network", "temperature", "cpu", "memory", "pulseaudio", "backlight", "battery", "tray"],
 
     "hyprland/window": {
         "format": "{}"
@@ -33,6 +33,12 @@
         "max-length": 50,
         "on-click": "nm-connection-editor"
     },
+    "temperature": {
+	"interval": 20,
+	"critical-threshold": 60,
+	"format": "{icon} {temperatureC}°C",
+	"format-icons": ["", "", "", ""]
+    },
     "cpu": {
 	"interval": 8,
 	"format": "  {usage}%",
@@ -40,7 +46,7 @@
     },
     "memory": {
 	"interval": 12,
-	"format": "  {percentage}%",
+	"format": "  {percentage}%",
 	"max-length": 10
     },
     "backlight": {
