@@ -8,20 +8,22 @@
 window#waybar {
     font-weight: bold;
     background: rgba(0,0,0,0);
-    color: #e2ccb0;
 }
 
 .modules-right {
     background-color: rgba(20,12,11,0.9);
     margin: 2px 10px 4px 0;
+    color: #e2ccb0;
 }
 .modules-center {
     background-color: rgba(20,12,11,0.9);
     margin: 2px 0 4px 0;
+    color: #e2ccb0;
 }
 .modules-left {
     background-color: rgba(0,0,0,0);
     margin: 2px 0 4px 5px;
+    color: #e2ccb0;
 }
 
 #workspaces {
@@ -32,6 +34,7 @@ window#waybar {
     margin: 0 2px;
     padding: 1px 5px;
     background: transparent;
+    color: #e2ccb0;
 }
 #workspaces button:hover {
     background: rgba(201,103,73,0.9);
