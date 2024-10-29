@@ -1,6 +1,6 @@
 show=drun
 prompt=Applications
-normal_window=false
+normal_window=true
 layer=top
 term=kitty
 
@@ -21,7 +21,7 @@ hide_search=false
 parse_search=false
 insensitive=true
 
-hide_scroll=true
+hide_scroll=false
 no_actions=true
 sort_order=default
 gtk_dark=true

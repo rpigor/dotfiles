@@ -13,7 +13,7 @@ alias neofetch='fastfetch'
 # alias cp='cp -i'
 # alias mv='mv -i'
 # alias rm='rm -i'
-alias updatemirrors='sudo reflector --country Brazil --age 8 --threads 3 --sort rate --save /etc/pacman.d/mirrorlist'
+alias updatemirrors='sudo reflector --country Italy,Switzerland,Germany,France,Austria --age 7 --threads 3 --number 6 --sort rate --save /etc/pacman.d/mirrorlist'
 
 # stupid flatpak aliases
 # alias vscode='com.visualstudio.code'
