@@ -4,6 +4,8 @@
 # export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
 # export GRB_LICENSE_FILE="${HOME}/.config/gurobi.lic"
 
+export PATH="${PATH}:/home/igorr/Downloads/vivado/pkg/vivado/opt/Xilinx/Vivado/2024.1/bin"
+
 # general aliases
 alias ls='exa -al --color-scale --group-directories-first --icons'
 alias df='duf -theme ansi'

@@ -7,7 +7,6 @@
                 "format": "{}"
         },
         "hyprland/workspaces": {
-                "disable-scroll": true,
                 "all-outputs": true,
                 "format": "{icon}",
                 "format-icons": {
@@ -19,7 +18,7 @@
                 "format-wifi": "{icon} {signalStrength}%",
                 "format-ethernet": "  {bandwidthTotalBytes}",
                 "format-disconnected": "  {bandwidthTotalBytes}",
-                "interval": 45,
+                "interval": 15,
                 "max-length": 20,
                 "on-click": "nm-connection-editor",
                 "tooltip-format-wifi": "{essid}",
@@ -28,13 +27,13 @@
                 "format-icons": ["󰤟 ", "󰤢 ", "󰤨 "]
         },
         "temperature": {
-                "interval": 20,
+                "interval": 25,
                 "critical-threshold": 75,
                 "format": "{icon} {temperatureC}°C",
                 "format-icons": ["", "", "", ""]
         },
         "cpu": {
-                "interval": 8,
+                "interval": 12,
                 "format": "  {usage}%",
                 "max-length": 10
         },
@@ -50,7 +49,7 @@
         },
         "battery": {
                 "bat": "BAT0",
-                "interval": 30,
+                "interval": 10,
                 "states": {
                         "warning": 18,
                         "critical": 10
