@@ -30,7 +30,7 @@
                 "interval": 25,
                 "critical-threshold": 75,
                 "format": "{icon} {temperatureC}°C",
-                "format-icons": ["", "", "", ""]
+                "format-icons": ["", "", ""]
         },
         "cpu": {
                 "interval": 12,
@@ -51,11 +51,12 @@
                 "bat": "BAT0",
                 "interval": 10,
                 "states": {
-                        "warning": 18,
+                        "warning": 20,
                         "critical": 10
                 },
                 "format": "{icon} {capacity}%",
-                "format-plugged": "{icon}   {capacity}%",
+                "format-plugged": "{icon}  {capacity}%",
+                "format-charging": "{icon}  {capacity}%",
                 "format-icons": [" ", " ", " ", " ", " "],
                 "max-length": 25
         },
